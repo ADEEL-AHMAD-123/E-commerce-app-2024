@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 import { useLocation } from 'react-router-dom'; // Import useLocation from react-router-dom
 import Meta from '../components/Meta';
 import BreadCrumb from '../components/BreadCrumb';
-import { userAsyncActions } from '../slices/userSlice';
+import { userAsyncActions } from '../redux/slices/userSlice';
 
 const ResetPassword = () => {
   const dispatch = useDispatch();

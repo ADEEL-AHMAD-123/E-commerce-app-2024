@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Meta from "../components/Meta";
 import BreadCrumb from "../components/BreadCrumb";
 import { Link } from "react-router-dom";
-import { saveOrderInfo } from "../slices/cartSlice";
+import { saveOrderInfo } from "../redux/slices/cartSlice";
 
 const ConfirmOrderPage = () => {
   const { shippingInfo, items } = useSelector((state) => state.cart);

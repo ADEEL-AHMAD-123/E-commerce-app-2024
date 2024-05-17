@@ -9,7 +9,7 @@ import {
   faCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { BiSolidCategory } from "react-icons/bi";
-import '../App.scss'
+
 import Navbar from "./Navbar";
 import SearchBox from "./SearchBox"; 
 

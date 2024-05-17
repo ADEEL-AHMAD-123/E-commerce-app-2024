@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Meta from '../components/Meta';
 import BreadCrumb from '../components/BreadCrumb';
-import { saveShippingInfo } from '../slices/cartSlice'; 
+import { saveShippingInfo } from '../redux/slices/cartSlice'; 
 import { useNavigate } from 'react-router-dom';
 
 const ShippingPage = () => {

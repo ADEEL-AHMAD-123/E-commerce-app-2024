@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { userAsyncActions,resetUserState } from "../slices/userSlice.js";
+import { userAsyncActions,resetUserState } from "../redux/slices/userSlice.js";
 import Loader from "../components/Loader.jsx";
 import ErrorMessage from "../components/Error.jsx";
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import { useNavigate } from "react-router-dom";
-import { resetCartState } from "../slices/cartSlice";
-import { resetCompareState } from "../slices/compareSlice";
-import { resetOrderState } from "../slices/orderSlice";
+import { resetCartState } from "../redux/slices/cartSlice";
+import { resetCompareState } from "../redux/slices/compareSlice";
+import { resetOrderState } from "../redux/slices/orderSlice";
 const Profile = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();

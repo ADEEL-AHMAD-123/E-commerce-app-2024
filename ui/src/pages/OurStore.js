@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 import { productAsyncActions } from '../redux/slices/productsSlice';
 import ProductListing from "../components/ProductListing.jsx";
 
-const OurStore = () => { 
+const OurStore = () => {
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchKeyword, setSearchKeyword] = useState("");

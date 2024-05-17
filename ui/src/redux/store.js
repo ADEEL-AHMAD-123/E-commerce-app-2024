@@ -8,7 +8,7 @@ import productReducer from './slices/productsSlice';
 import wishlistReducer from './slices/wishlistSlice';
 import compareReducer from './slices/compareSlice';
 import cartReducer from './slices/cartSlice';
-import reviewReducer from './slices/reviewSlice';
+
 import orderReducer from './slices/orderSlice';
 
 const rootReducer = combineReducers({
@@ -17,14 +17,13 @@ const rootReducer = combineReducers({
   wishlist: wishlistReducer,
   compare: compareReducer,
   cart: cartReducer,
-  reviews: reviewReducer,
   order: orderReducer,
 });
 
 const persistConfig = {
   key: 'root', // Key for the persistor
   storage, // Selected storage
-  whitelist: ['wishlist', 'compare', 'cart', 'reviews', 'order', 'user','products'], // Array of reducer slices to persist
+  whitelist: ['wishlist', 'compare', 'cart', 'order', 'user','products'], // Array of reducer slices to persist
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

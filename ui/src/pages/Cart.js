@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart, incrementQuantity, decrementQuantity } from '../slices/cartSlice';
+import { removeFromCart, incrementQuantity, decrementQuantity } from '../redux/slices/cartSlice';
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 

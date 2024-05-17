@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Meta from "../components/Meta";
 import BreadCrumb from "../components/BreadCrumb";
-import { userAsyncActions } from "../slices/userSlice"
+import { userAsyncActions } from "../redux/slices/userSlice"
 
 const ForgotPassword = () => {
   const dispatch = useDispatch();

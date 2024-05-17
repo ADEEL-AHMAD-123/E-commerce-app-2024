@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.scss';
 import ReactStars from "react-rating-stars-component";
 import { Link } from 'react-router-dom';
 import p1 from '../images/watch.jpg';

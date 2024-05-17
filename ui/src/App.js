@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import "./App.scss";
+import "./styles/App.scss";
 import Layout from "./components/Layout.jsx";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import OurStore from "./pages/ourStore";
-import BlogsPage from "./pages/BlogsPage";
+import BlogsPage from "./pages/BlogsPage"; 
 import ContactPage from "./pages/ContactPage";
 import CompareProducts from "./pages/CompareProducts";
 import Wishlist from "./pages/Wishlist";
@@ -24,18 +24,14 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Profile from "./pages/profile";
 import ShippingForm from "./pages/ShippingPage";
-import UserStatus from "./pages/status";
-import ProtectedRoute from "./pages/protectedRoute";
+import ProtectedRoute from "./components/ProtectedRoute";
 import ConfirmOrderPage from "./pages/ConfirmOrder";
 import ProductForm from "./components/ProductForm";
 import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./components/NotFound";
 import OrderSuccess from "./pages/OrderScucces";
 const App = () => {
-  const isAuth = useSelector((state) => state.user.isAuth);
 
-  console.log(isAuth, "auth");
-  console.log('All cookies:', document.cookie);
   return (
     <BrowserRouter>
       <Routes>

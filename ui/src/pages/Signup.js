@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { userAsyncActions } from '../slices/userSlice'; // Import the async thunk action
+import { userAsyncActions } from '../redux/slices/userSlice'; // Import the async thunk action
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Meta from '../components/Meta';

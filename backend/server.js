@@ -19,7 +19,7 @@ connectDB();
 // Create server
 let server;
 const startServer = () => {
-    server = app.listen(PORT, () => {
+    server = app.listen(8000, () => {
         console.log(`Server is running on port ${PORT}`);
     });
 };

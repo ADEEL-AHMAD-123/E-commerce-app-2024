@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromWishlist } from '../slices/wishlistSlice';
+import { removeFromWishlist } from '../redux/slices/wishlistSlice';
 import Meta from '../components/Meta';
 import BreadCrumb from '../components/BreadCrumb';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

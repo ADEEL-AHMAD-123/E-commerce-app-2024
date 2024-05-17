@@ -10,7 +10,6 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-import "../App.scss"; // Import the SCSS styles
 import app from "../images/app.jpg";
 import play from "../images/play.jpg";
 

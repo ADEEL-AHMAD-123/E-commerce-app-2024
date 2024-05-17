@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.scss';
 import { Link } from 'react-router-dom';
 import blog1 from '../images/blog-1.jpg'
 const Blogs = () => {
@@ -7,7 +6,7 @@ const Blogs = () => {
 <>
 <div className="blog">
 <div className="blog-image">
-<img src={blog1} alt="" />
+<img src={blog1} alt="" /> 
 </div>
 <div className="blog-content">
     <p className="date">12 August, 2023</p>

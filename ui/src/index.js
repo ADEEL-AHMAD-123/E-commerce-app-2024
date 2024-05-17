@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
 import App from './App';
 import { Provider } from 'react-redux';
-import store, { persistor } from './store'; // Import the persistor
+import store, { persistor } from './redux/store'; // Import the persistor
 import { PersistGate } from 'redux-persist/integration/react'; // Import PersistGate
 import { ToastContainer } from 'react-toastify';
 import { Elements } from '@stripe/react-stripe-js';

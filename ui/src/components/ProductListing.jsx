@@ -5,13 +5,19 @@ import Loader from "../components/Loader";
 import Error from "../components/Error";
 
 const ProductListing = ({ filterByFeatured = false, startIndex = 0, endIndex = null }) => {
-  const { products, isLoading, error } = useSelector(state => state.products);
+  const { products, isLoading, error } = useSelector(state => state.products) || {}; // Add default value for destructuring
 
   if (isLoading) return <Loader />;
   if (error) return <Error message={error} />;
 
+  // Check if products is defined before accessing it
+  if (!products) {
+    return <Error message="Products data is unavailable." />;
+  }
+
   // Filter products based on the filterByFeatured prop
-  let filteredProducts = products;
+  let filteredProducts = [...products]; // Create a copy of products array
+
   if (filterByFeatured) {
     filteredProducts = filteredProducts.filter(product => product.isFeatured === true);
   }
@@ -41,3 +47,6 @@ const ProductListing = ({ filterByFeatured = false, startIndex = 0, endIndex = n
 };
 
 export default ProductListing;
+
+
+

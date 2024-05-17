@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useStripe, useElements, CardNumberElement, CardExpiryElement, CardCvcElement } from '@stripe/react-stripe-js';
 import { useDispatch, useSelector } from 'react-redux';
-import { orderAsyncActions } from '../slices/orderSlice';
+import { orderAsyncActions } from '../redux/slices/orderSlice';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 

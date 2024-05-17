@@ -29,9 +29,9 @@ import brand6 from '../images/brand-06.png';
 import brand7 from '../images/brand-07.png';
 import brand8 from '../images/brand-08.png';
 import famous1 from '../images/watch2.png';
-import '../App.scss'
+
 import Blogs from '../components/Blogs';
-import { productAsyncActions } from '../slices/productsSlice';
+import { productAsyncActions } from '../redux/slices/productsSlice';
 import ProductListing from "../components/ProductListing.jsx";
 import SpecialProduct from '../components/SpecialProduct.jsx';
 import Meta from '../components/Meta.jsx';
