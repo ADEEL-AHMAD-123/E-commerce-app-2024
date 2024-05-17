@@ -20,7 +20,7 @@ app.use(cookieParser());
 
 // CORS middleware
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: process.env.CLIENT,
   credentials: true,
 }));
 
@@ -48,9 +48,9 @@ app.use("/api/v1", product);
 app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
-
+ 
 // Error handling middleware
-app.use(ErrorHandler);
+app.use(ErrorHandler); 
 
 // Export the app
 module.exports = app;

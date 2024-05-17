@@ -1,35 +1,50 @@
-const app = require("./app")
-const connectDB =require ("./db/db-connection.js")
+const app = require("./app");
+const connectDB = require("./db/db-connection.js");
 require('dotenv').config();
 
+const PORT = process.env.PORT || 8000; 
 
-//handling uncaught exceptions
-process.on("uncaughtException", (err)=>{ 
-    console.log(`Error :${err.message}`);
-    console.log(`shutting down he server for handling uncaught exceptionss`);
-    server.close(() => {
-        process.exit(1); 
-      }); 
-})    
+// Handling uncaught exceptions
+process.on("uncaughtException", (err) => {
+    console.error(`Error: ${err.message}`);
+    console.error(`Shutting down the server due to an uncaught exception`);
+    server.close(() => { 
+        process.exit(1);
+    });  
+});
 
 // Connect Database  
-connectDB()
+connectDB();
 
-// create server 
-const server = app.listen(8000, () => {
-    console.log(
-      `Server is running on a port no  http://localhost:8000`
-    ); 
-  }); 
-
- 
-  // unhandled promise rejection
-process.on("unhandledRejection", (err) => {
-    console.log(`Shutting down the server for ${err.message}`);
-    console.log(`shutting down the server for unhandle promise rejection`);
-  
-    server.close(() => {
-      process.exit(1);
+// Create server
+let server;
+const startServer = () => {
+    server = app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
     });
-  });
+};
 
+startServer();
+
+// Unhandled promise rejection
+process.on("unhandledRejection", (err) => {
+    console.error(`Shutting down the server due to an unhandled promise rejection: ${err.message}`);
+    server.close(() => {
+        process.exit(1);
+    });
+});
+
+// Gracefully handle server restarts (for tools like nodemon)
+process.on('SIGTERM', () => {
+    console.log('SIGTERM signal received: closing HTTP server');
+    server.close(() => {
+        console.log('HTTP server closed');
+    });
+});
+
+process.on('SIGINT', () => {
+    console.log('SIGINT signal received: closing HTTP server');
+    server.close(() => {
+        console.log('HTTP server closed');
+    });
+});
